@@ -3,15 +3,14 @@ let oneEuroIs = {
     "USD": 1.2, // us dollar
     "GBP": 0.8, // british pound
 }
-
 const fromDollarToYen = (dolares)=>{
-    return (dolares*106.58) 
+    return (dolares*(oneEuroIs[JPS]/oneEuroIs[USD])) 
 }
 const fromEuroToDollar = (euros)=>{
-    return (euros*1.2) 
+    return (euros*oneEuroIs[USD]) 
 }
 const fromYanToPound = (yan)=>{
-    return (yan*0.006) 
+    return (yan*oneEuroIs[GBP]*oneEuroIs[JPS]) 
 }
 
 
